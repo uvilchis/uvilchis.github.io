@@ -1,12 +1,22 @@
-body {
-    margin: 60px auto;
-    width: 70%;
+.wrapper, html, body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width:100%;
+    margin: 0px;
+}
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
     list-style: none;
     font-weight: bold;
+    color: white;
 }
 nav ul li, footer ul li {
     display: inline;
@@ -40,4 +50,102 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+}
+/* declare flexbox wrapper */
+.wrapper {
+    display: flex;
+}
+/* set up the landing page */
+.parallax {
+    min-height: 100%;
+    flex: 0 0 100%;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.85;
+    background-image: url("../_images/skyline-night.jpg");
+}
+/* set up the about me section, mobile first */
+.about-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+}
+.about {
+    width: auto;
+    position: absolute;
+    text-align: center;
+    border-style: solid;
+    border-color: white;
+    background-color: #000;
+    background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+    background: rgba(204, 204, 204, .50);
+}
+.name, .blurb {
+    font-size: auto;
+    color: white;
+    padding: 3px;
+}
+/* set up the bannner */
+header[role="banner"] {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 100%;
+    position: fixed; 
+    z-index:3;
+    transition: all 0.15s ease-in-out;
+    margin:0;
+    padding: 0; 
+    border: 0; 
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+@media screen and (max-width: 768px)  {
+  header[role="banner"] {
+      position:absolute;
+  }
+
+}
+
+@media screen and (min-width:768px) {
+    header[role="banner"] {
+        align-self: flex-end;
+    }
+
+}
+/* sample content to test parallax effect */
+.summary {
+    background-color: white;
+    align-self: center;
+}
+.projects__list {
+  display: flex;
+  flex-direction: column;
+  
+}
+.project__container {
+   display: flex;
+   background-color:orange;
+   flex-direction: column;
+   align-items: center;
+}
+.project__info {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+}
+
+.project__image {
+  max-width: 100%;
+}
+
+footer {
+    display: flex; 
+    justify-content: center;
 }
