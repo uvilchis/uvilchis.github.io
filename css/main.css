@@ -42,7 +42,9 @@ footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
 }
-
+ul {
+  list-style-type: none;
+}
 ul.posts { 
     margin: 20px auto 40px; 
     font-size: 1.5em;
@@ -71,17 +73,17 @@ ul.posts li {
 .about-container {
     display: flex;
     justify-content: center;
-    margin-top: 15%;
+    margin-top: 30px; 
 }
 .about {
     width: auto;
     position: absolute;
     text-align: center;
-    border-style: solid;
-    border-color: white;
-    background-color: #000;
-    background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
-    background: rgba(204, 204, 204, .50);
+    /* border-style: solid;
+    border-color: white; */
+    /* background-color: #000; */
+    /* background: rgb(204, 204, 204); Fallback for older browsers without RGBA-support */
+    /* background: rgba(204, 204, 204, .50); */
 }
 .name, .blurb {
     font-size: auto;
@@ -106,16 +108,10 @@ header[role="banner"] {
 }
 
 @media screen and (max-width: 768px)  {
-  header[role="banner"] {
-      position:absolute;
-  }
-
+ 
 }
 
 @media screen and (min-width:768px) {
-    header[role="banner"] {
-        align-self: flex-end;
-    }
 
 }
 /* sample content to test parallax effect */
@@ -123,15 +119,20 @@ header[role="banner"] {
     background-color: white;
     align-self: center;
 }
+/* .portfolio_content {
+   flex-direction: column-reverse;
+} */
 .projects__list {
   display: flex;
   flex-direction: column;
-  
 }
 .project__container {
    display: flex;
    flex-direction: column;
+   justify-content: center;
    align-items: center;
+   border-bottom: solid;
+   border-color: black;
 }
 .project__info {
     display: flex;
@@ -139,12 +140,28 @@ header[role="banner"] {
     align-self: center;
     align-items: center;
 }
-
 .project__image {
-  max-width: 100%;
+    max-width: 75%; 
+    margin-left: 12.5%;
 }
-
+/* .a-tag {
+    display: flex;
+    justify-content: center;
+} */
 footer {
     display: flex; 
     justify-content: center;
+}
+/* set up logo list  */
+.logo-list {
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.logo {
+    height: 50px;
+    margin: 2px;
 }
