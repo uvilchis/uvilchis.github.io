@@ -38,12 +38,15 @@ p {
     line-height: 1.4em;
     color: #333;
 }
-footer {
+footer {   
+    display: flex; 
+    justify-content: center;
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
 }
 ul {
-  list-style-type: none;
+    list-style-type: none;
+    margin-left: -35px;
 }
 ul.posts { 
     margin: 20px auto 40px; 
@@ -73,20 +76,25 @@ ul.posts li {
 .about-container {
     display: flex;
     justify-content: center;
+    
     margin-top: 30px; 
 }
 .about {
     width: auto;
     position: absolute;
     text-align: center;
-    /* border-style: solid;
-    border-color: white; */
-    /* background-color: #000; */
-    /* background: rgb(204, 204, 204); Fallback for older browsers without RGBA-support */
-    /* background: rgba(204, 204, 204, .50); */
 }
-.name, .blurb {
+.name {
+    font-family: 'Hind Madurai', sans-serif;
     font-size: auto;
+    font-weight: 300;
+    color: white;
+    padding: 3px;
+}
+.blurb {
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: auto;
+    font-weight: 200;
     color: white;
     padding: 3px;
 }
@@ -116,23 +124,40 @@ header[role="banner"] {
 }
 /* sample content to test parallax effect */
 .summary {
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     background-color: white;
-    align-self: center;
+    font-family: 'Hind Madurai', sans-serif;
+    margin: 10px;
+    text-align: center;
 }
-/* .portfolio_content {
-   flex-direction: column-reverse;
-} */
+.summ_header, .projects__header {
+    position: center;
+    font-weight: 275;
+}
+.summ_text {
+    font-weight: 0;
+    font-size: 15px;
+}
+
+.portfolio_content {
+   text-align: center;
+} 
 .projects__list {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 .project__container {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   border-bottom: solid;
-   border-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid;
+    border-color: #d3d3d3;
+    border-bottom-width: thin;
+    position:relative;
 }
 .project__info {
     display: flex;
@@ -141,17 +166,30 @@ header[role="banner"] {
     align-items: center;
 }
 .project__image {
-    max-width: 75%; 
-    margin-left: 12.5%;
+    max-width: 75%;  
 }
+.project__info {
+    font-family: 'Hind Madurai', sans-serif;
+}
+.project__name {
+    font-size: 30px;
+    margin-bottom: 0px;
+    font-weight: 500;
+}
+.project__description, .project__tech {
+    margin-bottom: 0px;
+    font-size: 18px;
+}
+.project__repo {
+    margin-bottom: 4px;
+}
+
 /* .a-tag {
     display: flex;
     justify-content: center;
 } */
-footer {
-    display: flex; 
-    justify-content: center;
-}
+
+
 /* set up logo list  */
 .logo-list {
     justify-self: center;
@@ -159,9 +197,37 @@ footer {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    align-items: center;
+    
 }
 .logo {
     height: 50px;
     margin: 2px;
+}
+.redux {
+   padding-bottom: 4px;
+}
+.d3 {
+   padding-top: 2px;
+}
+.mobile {
+    margin-top: 20px;
+}
+.footer {
+    background-color: #d3d3d3;
+}
+.footer__wrapper {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+.icons {
+    color: white;
+    margin-top: -60px;
+    font-size: 1.5em;
+}
+.footer-icons {
+   color: #d3d3d3;
+   font-size: 1.5em;
+   margin: 2px;
+   padding: 5px;
 }
